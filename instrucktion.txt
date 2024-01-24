@@ -1,0 +1,42 @@
+
+
+
+
+Assignment 3
+You need to create a NEWS site project with nextjs-prisma. Mysql should be used as the database.
+Requirements:
+Dynamic Header Top With Social Links
+Navbar With Dynamic News Categories
+Navbar Search Option | Login Logout Option
+Latest News, Popular News Features
+News By Category
+Footer
+News Details & User Comment Option
+SEO features
+
+--------->>>>>> All API:
+API Routes for socials
+API Routes for news category
+API Routes for news-list by category
+API Routes for news-list by type latest, popular & more
+API Routes for news-list by search
+API Routes for Slider News, Featured News
+API Routes for News Details
+
+
+-------->>>>>Working With Front-End:
+Navbar
+Home Page -Hero Section
+Home page -Latest Section
+Home page -Slider Section
+Popular section
+Subscription section
+Footer
+News list by category page
+News list by search page
+News details page
+
+
+Warning: If you submit exactly in the class project then the exam will be considered as cancelled. And you will get zero in the result. You have to do the whole template design and it has to be unique.
+
+If you need help understanding somewhere, go to the support session and get it resolved.
