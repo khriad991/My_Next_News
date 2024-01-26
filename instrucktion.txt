@@ -16,6 +16,7 @@ SEO features
 
 --------->>>>>> All API:
 API Routes for socials
+
 API Routes for news category
 API Routes for news-list by category
 API Routes for news-list by type latest, popular & more

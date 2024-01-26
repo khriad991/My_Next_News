@@ -1,15 +1,16 @@
+
 import {PrismaClient} from "@prisma/client";
 import {NextResponse} from "next/server";
 
-export async function GET(req,res){
+export const POST = async (req,res)=>{
     try {
         let prisma = new PrismaClient();
-        let data = await prisma.socials.findMany();
+        let reqJson = await  req.json();
+        let data = await prisma.categories.create({data:reqJson})
 
         return NextResponse.json({status:"success",data})
-
     }catch (e) {
-        return NextResponse.json({status:"fail",data:e})
+        return NextResponse.json({status:"fail",data:e.toString()})
 
     }
 }

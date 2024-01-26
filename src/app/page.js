@@ -1,113 +1,112 @@
 import Image from "next/image";
+import {Fragment} from "react";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      <NavBar/>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <br/><br/><br/><br/><br/><br/><br/><br/>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <header className="fixed top-0 left-0 right-0 z-50">
+            <nav className="bg-black">
+                <div className="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+                    <div className="flex justify-between">
+                        <div className="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">Tailnews
+                        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                        <div className="flex flex-row">
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+                            <ul className="navbar hidden lg:flex lg:flex-row text-gray-400 text-sm items-center font-bold">
+                                <li className="active relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent"
+                                       href="index.html">Home</a>
+                                </li>
+                                <li className="dropdown relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Pages</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Sport</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Travel</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Techno</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Worklife</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">Future</a>
+                                </li>
+                                <li className="relative border-l border-gray-800 hover:bg-gray-900">
+                                    <a className="block py-3 px-6 border-b-2 border-transparent" href="#">More</a>
+                                </li>
+                            </ul>
+
+
+                            <div className="flex flex-row items-center text-gray-300">
+                                <div
+                                    className="search-dropdown relative border-r lg:border-l border-gray-800 hover:bg-gray-900">
+                                    <button className="block py-3 px-6 border-b-2 border-transparent">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" className="open bi bi-search" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                             fill="currentColor" className="close bi bi-x-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"></path>
+                                            <path fill-rule="evenodd"
+                                                  d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"></path>
+                                        </svg>
+                                    </button>
+                                    <div
+                                        className="dropdown-menu absolute left-auto right-0 top-full z-50 text-left bg-white text-gray-700 border border-gray-100 mt-1 p-3"
+                                        style={{minWidth: "12rem"}}>
+                                        <div className="flex flex-wrap items-stretch w-full relative">
+                                            <input type="text"
+                                                   className="flex-shrink flex-grow flex-shrink max-w-full leading-5 w-px flex-1 relative py-2 px-5 text-gray-800 bg-white border border-gray-300 overflow-x-auto focus:outline-none focus:border-gray-400 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600"
+                                                   name="text" placeholder="Search..." aria-label="search" />
+                                                <div className="flex -mr-px">
+                                                    <button
+                                                        className="flex items-center py-2 px-5 -ml-1 leading-5 text-gray-100 bg-black hover:text-white hover:bg-gray-900 hover:ring-0 focus:outline-none focus:ring-0"
+                                                        type="submit">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" className="bi bi-search"
+                                                             viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="relative hover:bg-gray-800 block lg:hidden">
+                                    <button type="button"
+                                            className="menu-mobile block py-3 px-6 border-b-2 border-transparent">
+                                        <span className="sr-only">Mobile menu</span>
+                                        <svg className="inline-block h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
+                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                  d="M4 6h16M4 12h16M4 18h16"></path>
+                                        </svg>
+                                        Menu
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+    </div>
   );
 }

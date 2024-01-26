@@ -31,21 +31,20 @@ model categories {
 }
 
 model news_list {
-  id           Int        @id @default(autoincrement())
-  title        String     @db.VarChar(200)
-  short_des    String     @db.VarChar(300)
-  img1         String     @db.VarChar(500)
-  img2         String     @db.VarChar(500)
-  img3         String     @db.VarChar(500)
-  catID        Int
-  logn_des     String     @db.LongText
-  keyword      String     @db.VarChar(300)
-  type         String     @db.VarChar(200)
-  categoriesId Int
-  categories   categories @relation(fields: [catID], references: [id], onDelete: Restrict, onUpdate: Cascade)
-  comments     comments[]
-  createdAt    DateTime   @default(now()) @db.Timestamp(0)
-  updatedAt    DateTime   @default(now()) @updatedAt @db.Timestamp(0)
+  id         Int        @id @default(autoincrement())
+  title      String     @db.VarChar(200)
+  short_des  String     @db.VarChar(300)
+  img1       String     @db.VarChar(500)
+  img2       String     @db.VarChar(500)
+  img3       String     @db.VarChar(500)
+  logn_des   String     @db.LongText
+  keyword    String     @db.VarChar(300)
+  type       String     @db.VarChar(200)
+  catID      Int
+  categories categories @relation(fields: [catID], references: [id], onDelete: Restrict, onUpdate: Cascade)
+  comments   comments[]
+  createdAt  DateTime   @default(now()) @db.Timestamp(0)
+  updatedAt  DateTime   @default(now()) @updatedAt @db.Timestamp(0)
 }
 
 model comments {
