@@ -2,16 +2,16 @@
 
 import React from 'react';
 
-const NewsCard = ({news}) => {
+const NewsCard = (props) => {
     return (
         <>
-            <div className="container mx-auto md:px-6">
+            <div>
                 <section className="mb-10">
-                    <h2 className="mb-1 pb-4 text-3xl font-bold capitalize">All News</h2>
+                    <h2 className="mb-1 pb-4 text-3xl font-bold capitalize">{props.title}</h2>
                     <hr className=" bg-black h-[2px] mb-12 "/>
                     <div className="grid gap-6 lg:grid-cols-3 xl:gap-x-12">
                         {
-                            news.map((item,id)=>(
+                            props.news.map((item,id)=>(
                                 <div key={id} className="mb-6 lg:mb-0 my-5">
                                     <div className="relative block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
                                         <div className="flex">

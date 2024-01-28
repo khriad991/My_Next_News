@@ -1,12 +1,12 @@
 "use client"
-import {Button, Carousel, IconButton, Typography} from "@material-tailwind/react";
+import {Carousel, Typography} from "@material-tailwind/react";
 
 
-export  async function Slider({slider}) {
+export  async function Slider(props) {
     return (
         <Carousel className="rounded">
             {
-                slider.map((item,i)=>{
+                props.slider.map((item,i)=>{
                     if( i < 5){
                         return (
                             <div key={i} className="relative h-full w-full">

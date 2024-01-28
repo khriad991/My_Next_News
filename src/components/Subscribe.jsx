@@ -42,8 +42,8 @@ const Subscribe = () => {
 
     return (
 
-        <div className="py-10 bg-blue-50 ">
-            <div className="container">
+        <div className="py-10 -mt-9 bg-blue-50 ">
+            <div className="container py-10">
                 <div className="px-6 py-4  flex justify-center items-center flex-col ">
                     <p className=" text-2xl text-center mb-8 capitalize font-bold ">
                         Subscribe the newsletter For our latest updates ,news & offers.
