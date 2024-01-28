@@ -2,39 +2,32 @@
 
 import React from 'react';
 import MainLayout from "@/components/main/MainLayout";
-import PopularNewsList from "@/components/PopularNews";
-import NewsList from "@/components/NewsList";
-const getData = async (id) => {
-    const popular = (await (await fetch(`${process.env.HOST}/api/news/type?type=popular`, {
-                cache: "no-store"})).json())["data"];
-    let latest = (await (await fetch(`${process.env.HOST}/api/news/category?catID=${id}`, {
-                cache: "no-store"})).json())["data"];
+import NewsCard from "@/components/NewsCard";
+const getData = async (catID) => {
+    const news = (await (await fetch(`${process.env.HOST}/api/news/category?catID=${catID}`)).json())['data']
+    const category = (await (await fetch(`${process.env.HOST}/api/category/find`)).json())['data']
 
-    return { popular, latest };
+    return { news,category};
 };
 
 const Page = async (props) => {
-    let id = props.searchParams["id"];
-    console.log("my is is ---->>>>>",id)
-    const latest =( await getData(id)).latest;
-    console.log(latest)
-    const popular =( await getData(id)).popular;
+    let catID = props.searchParams["catID"];
+    const data =await getData(catID)
     return (
         <MainLayout>
-            <div className="container">
-                <div className="py-5">
-                    <h5 className="text-xl font-bold mb-2">LATEST</h5>
-                    <hr className="border-b border-gray-300 mb-4" />
-                    <div className="flex flex-col gap-5 md:flex-row">
-                        <div className="md:w-3/4 mb-4 md:mb-0">
-                            <NewsList latest={latest} />
-
-                        </div>
-                        <div className="md:w-1/4">
-                            <PopularNewsList popular={popular} />
-                        </div>
-                    </div>
-                </div>
+            <div className="container flex flex-col mt-20">
+                <div className='w-full flex flex-col '>
+                    {
+                        data.category.map((cat,i)=>{
+                            if(Number(catID) === Number(cat['id'])){
+                                return(
+                                    <h2 key={i} className="mb-1 pb-4 text-3xl font-bold capitalize">
+                                        {cat['name']} News
+                                    </h2>
+                                )}})}
+                    <hr className=" bg-black h-[2px] mb-12 "/>
+                    <NewsCard news={data['news']} />
+                </div>+
             </div>
         </MainLayout>
     );

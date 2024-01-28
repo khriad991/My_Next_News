@@ -89,6 +89,11 @@ const NavBar = ({category,socials}) => {
                                 </button>
                             </div>
                         </div>
+                        <div className="flex-1 flex justify-center items-center">
+                                <Link href='/login' className="bg-blue-100 px-8 py-2 border-2 border-blue-200 hover:border-gray-800  rounded-lg text-black hover:bg-white font-bold transition-all capitalize duration-300 ">
+                                    login
+                                </Link>
+                        </div>
                     </div>
                 </div>
             </div>

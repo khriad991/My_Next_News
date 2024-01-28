@@ -1,6 +1,8 @@
 import React from 'react';
 import MainLayout from "@/components/main/MainLayout";
 import NewsDetails from "@/components/NewsDetails";
+import NewsCard from "@/components/NewsCard";
+import {data} from "autoprefixer";
 
 
 const getData = async (id) => {
@@ -9,11 +11,16 @@ const getData = async (id) => {
 }
 
 const Page = async (props) => {
+    let id = props.searchParams['id']
 
-    const detailsNews = await getData(props.searchParams['id'])
-    console.log(detailsNews)
+    const data = await getData(id)
+    console.log(data)
     return (
         <MainLayout>
+            <div className="container">
+                <NewsDetails details={data.newsDetails} />
+
+            </div>
            
         </MainLayout>
     );

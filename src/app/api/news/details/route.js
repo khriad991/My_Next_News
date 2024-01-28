@@ -6,7 +6,13 @@ export async function GET(req,res){
         let {searchParams} = new URL(req.url)
         let id = parseInt(searchParams.get("id"))
         let prisma = new PrismaClient();
-        let data = await  prisma.news_list.findMany({where: {id}})
+        let data = await  prisma.news_list.findMany({
+            where: {id},
+            include:{
+                categories: {select: {id: true,name: true}},
+            }
+
+        })
 
         return NextResponse.json({status:"success",data})
 
