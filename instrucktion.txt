@@ -7,7 +7,12 @@ You need to create a NEWS site project with nextjs-prisma. Mysql should be used 
 Requirements:
 Dynamic Header Top With Social Links
 Navbar With Dynamic News Categories
-Navbar Search Option | Login Logout Option
+
+Navbar Search Option
+
+
+| Login Logout Option
+
 Latest News, Popular News Features
 News By Category
 Footer
@@ -31,7 +36,12 @@ Home Page -Hero Section
 Home page -Latest Section
 Home page -Slider Section
 Popular section
+
+
+
 Subscription section
+
+
 Footer
 News list by category page
 News list by search page

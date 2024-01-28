@@ -1,12 +1,20 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import MainLayout from "@/components/main/MainLayout";
-import NavBar from "@/components/main/NavBar";
-import Footer from "@/components/main/Footer";
+import NewsDetails from "@/components/NewsDetails";
 
-const Page = () => {
+
+const getData = async (id) => {
+    const newsDetails = (await (await fetch(`${process.env.HOST}/api/news/details?id=${id}`)))
+     return {newsDetails}
+}
+
+const Page = async (props) => {
+
+    const detailsNews = await getData(props.searchParams['id'])
+    console.log(detailsNews)
     return (
         <MainLayout>
-            <h1>This is From details Page</h1>
+           
         </MainLayout>
     );
 };

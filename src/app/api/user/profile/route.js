@@ -10,7 +10,7 @@ export const GET =async () => {
         let id = parseInt(headerList.get("id"))
         let data = await prisma.users.findUnique({
             where: {id},
-            select:{name:true,email:true,phone:true}
+            select:{id:true,name:true,email:true,phone:true}
             })
         return NextResponse.json({status:"success",data})
 

@@ -59,14 +59,19 @@ const NavBar = ({category,socials}) => {
             <div className="bg-black sticky top-0 left-0 py-3">
                 <div className="container ">
                     <div className="flex justify-between flex-col lg:flex-row">
-                        <div className="flex-1">
+                        <div className="w-fit text-left mr-8">
                             <strong className="text-2xl text-white font-bold">LoGo</strong>
                         </div>
-                        <div className="flex-[2] mt-2">
+                        <div className="flex-[4] mt-2">
                             <ul className='flex item-center justify-start gap-x-4 flex-row '>
+                                <li >
+                                    <Link className="capitalize text-sm text-white -mr-4 hover:text-gray-300 trasition-all duration-300 font-semibold" href="/">
+                                        Home
+                                    </Link>
+                                </li>))
                                 {category.map((item,id)=>(
                                     <li key={1}>
-                                        <Link className="uppercase text-sm text-white hover:text-gray-300 trasition-all duration-300 font-semibold" href={`/category?catID=${item["id"]}`}>
+                                        <Link className="capitalize text-sm text-white hover:text-gray-300 trasition-all duration-300 font-semibold" href={`/category?catID=${item["id"]}`}>
                                             {item['name']}
                                         </Link>
                                     </li>))
