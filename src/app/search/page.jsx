@@ -17,8 +17,8 @@ const Page = async (props) => {
         <MainLayout>
             <div className="container flex flex-col mt-20">
                 <div className='w-full flex flex-col '>
-                    <h2  className="mb-1 pb-4 text-3xl font-bold capitalize">
-                         {keyword} Keyword News Here
+                    <h2  className="mb-1 pb-4 text-2xl text-black font-semibold capitalize">
+                         <span className="font-bold text-blue-400 text-3xl">{keyword}</span> Keyword News Here
                     </h2>
                     <hr className=" bg-black h-[2px] mb-12 "/>
                     <NewsCard news={data['news']} />

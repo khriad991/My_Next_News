@@ -2,6 +2,7 @@ import {PrismaClient} from "@prisma/client";
 const prisma = new PrismaClient();
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+/*
 
 export async function GET(req, res) {
     try {
@@ -20,6 +21,33 @@ export async function GET(req, res) {
         return NextResponse.json({ status: "fail", data: e });
     }
 }
+*/
+
+export async function GET(req,res){
+    try {
+        const {searchParams} = new URL(req.url);
+        const postID =parseInt( searchParams.get("postID"));
+        const data  = await prisma.comments.findMany({
+            where: {postID:postID},
+            include:{
+                users:{
+                    select:{
+                        id:true,
+                        name:true
+                    }
+                }
+            }
+
+        })
+        return NextResponse.json({status:"success",data})
+    }catch (e) {
+
+        NextResponse.json({status:"fail",data:e.toString()})
+    }
+}
+
+
+
 
 export async function POST(req, res) {
     try {

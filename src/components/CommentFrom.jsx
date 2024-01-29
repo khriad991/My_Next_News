@@ -1,6 +1,4 @@
 "use client";
-
-
 import Cookies from "js-cookie";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -34,9 +32,6 @@ const CommentForm = (props) => {
         e.preventDefault();
         if (IsEmpty(data.descriptions)) {
             ErrorToast("Comments is Required");
-
-
-
         } else {
             setSubmit(true);
             const options = {

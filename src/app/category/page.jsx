@@ -21,8 +21,8 @@ const Page = async (props) => {
                         data.category.map((cat,i)=>{
                             if(Number(catID) === Number(cat['id'])){
                                 return(
-                                    <h2 key={i} className="mb-1 pb-4 text-3xl font-bold capitalize">
-                                        {cat['name']} News
+                                    <h2 key={i}  className="mb-1 pb-4 text-2xl text-black font-semibold capitalize">
+                                        <span className="font-bold text-blue-400 text-3xl">{cat['name']}</span>  News Here
                                     </h2>
                                 )}})}
                     <hr className=" bg-black h-[2px] mb-12 "/>
