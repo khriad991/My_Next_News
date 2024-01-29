@@ -1,6 +1,7 @@
 import { formatDistance } from "date-fns";
 import Image from "next/image";
-import CommentForm from "./CommentForm";
+import CommentForm from "@/components/CommentFrom";
+
 
 const CommentList = (props) => {
     const { comments, postID } = props;

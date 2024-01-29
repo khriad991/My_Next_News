@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Subscribe from "./Subscribe";
 
-const PopularNewsList = (props) => {
+const PopularNewsList = ({props}) => {
     const { popular } = props;
     return (
         <div>

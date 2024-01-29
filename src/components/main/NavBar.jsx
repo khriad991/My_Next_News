@@ -6,9 +6,10 @@ import {FaFacebookF, FaLinkedin, FaTwitter, FaYoutube} from "react-icons/fa";
 import {FaRegCalendarDays} from "react-icons/fa6";
 const NavBar = ({category,socials}) => {
     return (
-        <header className=" ">
-            <div className="py-2 bg-black bg-opacity-40 text-black ">
-                <div className="container">
+
+        <header className="">
+            <div className="py-2 bg-indigo-100-50 text-black sticky top-0 ">
+                <div className="container ">
                     <div className="flex justify-between items-center">
                         <div className="flex-1">
                             <h6 className="flex items-center">
@@ -56,16 +57,16 @@ const NavBar = ({category,socials}) => {
                     </div>
                 </div>
             </div>
-            <div className="bg-black sticky top-0 left-0 py-3">
+            <div className="bg-black py-3 sticky top-0  ">
                 <div className="container ">
                     <div className="flex justify-between flex-col lg:flex-row">
                         <div className="w-fit text-left mr-8">
                             <strong className="text-2xl text-white font-bold">LoGo</strong>
                         </div>
-                        <div className="flex-[4] mt-2">
+                        <div className="flex-[10] mt-2">
                             <ul className='flex item-center justify-start gap-x-4 flex-row '>
                                 <li >
-                                    <Link className="capitalize text-sm text-white -mr-4 hover:text-gray-300 trasition-all duration-300 font-semibold" href="/">
+                                    <Link className="capitalize text-sm text-white -mr-4 hover:text-gray-300 trasition-all duration-300 font-semibold fast:px-4" href="/">
                                         Home
                                     </Link>
                                 </li>))
@@ -78,18 +79,18 @@ const NavBar = ({category,socials}) => {
                                 }
                             </ul>
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-[2] justify-end">
                             <div className="flex justify-center item-eenter relative  ">
                                 <input type="text"
                                        placeholder="Search Hera..."
                                        className="bg-white rounded-lg focus:bg-gray-700 trasition duration-300 outline-none  border-y-2 border-x-[3px] border-gold-900 w-[300px] py-2 px-4"
                                 />
-                                <button className="bg-gray-600 w-auto px-4 py-[7px] rounded-lg hover:bg-gray-800 trasition-all duration-300 absolute top-[3px] right-[4px]">
+                                <button  className="bg-gray-600 w-auto px-4 py-[7px] rounded-lg hover:bg-gray-800 trasition-all duration-300 absolute top-[3px] right-[4px]">
                                     <FiSearch className="text-2xl text-white font-bold flex justify-center item-center"/>
                                 </button>
                             </div>
                         </div>
-                        <div className="flex-1 flex justify-center items-center">
+                        <div className="flex-1 ml-4 flex justify-end items-center">
                                 <Link href='/login' className="bg-blue-100 px-8 py-2 border-2 border-blue-200 hover:border-gray-800  rounded-lg text-black hover:bg-white font-bold transition-all capitalize duration-300 ">
                                     login
                                 </Link>

@@ -15,7 +15,7 @@ const Page = async (props) => {
     const data =await getData(catID)
     return (
         <MainLayout>
-            <div className="container flex flex-col mt-20">
+            <div className="container flex flex-col mt-10">
                 <div className='w-full flex flex-col '>
                     {
                         data.category.map((cat,i)=>{

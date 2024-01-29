@@ -1,7 +1,4 @@
 
-
-
-
 Assignment 3
 You need to create a NEWS site project with nextjs-prisma. Mysql should be used as the database.
 Requirements:
