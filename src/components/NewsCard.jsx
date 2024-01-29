@@ -8,7 +8,6 @@ const NewsCard = (props) => {
         <>
             <div>
                 <section className="mb-10">
-
                     <div className="grid gap-6 lg:grid-cols-3 xl:gap-x-12">
                         {
                             news.map((item,id)=>(
@@ -42,10 +41,8 @@ const NewsCard = (props) => {
                                         </div>
                                     </div>
                                 </div>
-
                             ))
                         }
-
                     </div>
                 </section>
                 {/* Section: Design Block */}

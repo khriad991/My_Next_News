@@ -1,10 +1,11 @@
-
+"use client"
 import {FiSearch} from "react-icons/fi";
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import {FaFacebookF, FaLinkedin, FaTwitter, FaYoutube} from "react-icons/fa";
 import {FaRegCalendarDays} from "react-icons/fa6";
 const NavBar = ({category,socials}) => {
+    const [searchKey ,setSearchKey] = useState('0')
     return (
 
         <header className="">
@@ -82,12 +83,13 @@ const NavBar = ({category,socials}) => {
                         <div className="flex-[2] justify-end">
                             <div className="flex justify-center item-eenter relative  ">
                                 <input type="text"
+                                      onChange={e=> setSearchKey(e.target.value)}
                                        placeholder="Search Hera..."
                                        className="bg-white rounded-lg focus:bg-gray-700 trasition duration-300 outline-none  border-y-2 border-x-[3px] border-gold-900 w-[300px] py-2 px-4"
                                 />
-                                <button  className="bg-gray-600 w-auto px-4 py-[7px] rounded-lg hover:bg-gray-800 trasition-all duration-300 absolute top-[3px] right-[4px]">
+                                <Link href={`/search?keyword=${searchKey}`}  className="bg-gray-600 w-auto px-4 py-[7px] rounded-lg hover:bg-gray-800 trasition-all duration-300 absolute top-[3px] right-[4px]">
                                     <FiSearch className="text-2xl text-white font-bold flex justify-center item-center"/>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="flex-1 ml-4 flex justify-end items-center">

@@ -34,7 +34,7 @@ const SingUpFrom = () => {
                                 />
                                 <div id="radius-shape-2" className="absolute shadow-lg" />
                                 <div className="relative bg-[hsla(0,0%,100%,0.9)] backdrop-blur-[25px] backdrop-saturate-[200%] block rounded-lg px-6  shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,15%,0.9)] dark:shadow-black/20 md:px-12 py-14">
-                                    <h1 className='text-3xl font-extrabold text-center text-blue-400 mb-6'>Registered Here </h1>
+                                    <h1 className='text-3xl font-extrabold text-center text-blue-400 mb-6'>Registerd Here </h1>
                                     <form >
 
                                         <div className="relative mb-6" data-te-input-wrapper-init="">
