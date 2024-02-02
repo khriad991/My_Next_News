@@ -74,7 +74,7 @@ const LoginFrom = () => {
                                         </button>
 
                                         <p className='text-black text-base text-center'>
-                                            Already have an account? Go to <Link className="text-blue-500 font-medium capitalize" href='/user/register'>register here</Link>
+                                            Dont have an account? Go to <Link className="text-blue-500 font-medium capitalize" href='/user/register'>Register here</Link>
                                         </p>
 
                                     </form>

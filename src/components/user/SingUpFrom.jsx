@@ -101,9 +101,12 @@ const SingUpFrom = () => {
                                                 Sign up
                                             </button>
 
+
                                             <p className='text-black text-base text-center'>
-                                                Dont have an account? Go to <Link className="text-blue-500 font-medium capitalize" href='/user/login'>Login here</Link>
+                                                Already have an account? Go to <Link className="text-blue-500 font-medium capitalize" href='/user/login'>Login here</Link>
                                             </p>
+
+
                                         </div>
 
 
