@@ -1,13 +1,12 @@
 "use client"
 import {Carousel, Typography} from "@material-tailwind/react";
 
-
 export  async function Slider(props) {
     return (
         <Carousel className="rounded">
             {
                 props.slider.map((item,i)=>{
-                    if( i < 5){
+                    if( i < 6){
                         return (
                             <div key={i} className="relative h-full w-full">
                                 <img
@@ -18,7 +17,7 @@ export  async function Slider(props) {
                                 <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/60">
 
                                         <div  className="w-3/4 text-center md:w-2/4">
-                                            <a href={`/details?newsID=${item['id']}`}>
+                                            <a href={`/details?id=${item['id']}`}>
 
                                                 <Typography
                                                     variant="h1"
